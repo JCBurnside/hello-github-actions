@@ -1,17 +1,17 @@
-name: main
+name: dev
 on:
   ?
     - push
     - pull_request
   :
     branches:
-      - master
+      - dev
 jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@dev
     - uses: ./action-a
       env:
         MY_NAME: "Mona"
